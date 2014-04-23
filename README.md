@@ -28,10 +28,10 @@ The images and animations seen during the execution of the game were supplied th
 sources including:
 
 Freebuttons.com
+
 Lostgarden.com
 
 Resources for learning and implementing Java game development were found at:
-
 java-gaming.org
 ===============
 
