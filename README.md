@@ -12,7 +12,7 @@ This library has multiple classes that enable programmers to build lightweight g
 Using the tools in this library allow other classes to import certain mechanics that are found in
 popular Java games released today.
 
-Slice2D
+Slick2D
 -------
 This library is a wrapper for the lwjgl library that is utilized to create state based games.
 With this library users are able to create and display images and animations as well as code
