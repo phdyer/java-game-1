@@ -2,6 +2,9 @@ java-game-1
 ===========
 
 Here is where the project documentation, source code, and image files are kept.
+The Source branch holds all of the source code. The Image branch holds all of the images of the levels in the game.
+These two branches are in the Master branch, whic is where the user stories, project estimation, and class diagrams 
+are kept.
 
 This project is built using preexisting third party libraries made for the Java language.
 These libraries:
@@ -33,6 +36,5 @@ Lostgarden.com
 
 Resources for learning and implementing Java game development were found at:
 java-gaming.org
-===============
 
 Created by: Presley Dyer
