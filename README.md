@@ -4,7 +4,7 @@ java-game-1
 Here is where the project documentation, source code, and image files are kept.
 The Source branch holds all of the source code. The Image branch holds all of the images of the levels in the game.
 These two branches are in the Master branch, whic is where the user stories, project estimation, and class diagrams 
-are kept.
+are kept. There is the entire project in the master branch in the folder "Phdyer D389W352" that can be loaded into Eclipse and ran.
 
 This project is built using preexisting third party libraries made for the Java language.
 These libraries:
