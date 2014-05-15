@@ -7,26 +7,18 @@ import org.newdawn.slick.state.*;
 public class ControlsScreen extends BasicGameState {
 	
 	public Image grassGround;
-	public Image controls;
-	public Image controlsTitle;
-	public Image backButton;
-	float controlsX = 225;
-	float controlsY = 75;
-	float titleX = 175;
-	float titleY = 10;
-	float backX = 5;
-	float backY = 100;
+	public Image controlsScreen;
+	float controlsX = 0;
+	float controlsY = 0;
 	
 	public ControlsScreen(int state) {
-		
 		
 	}
 	
 	public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
+		
 		grassGround = new Image("res/Grass Block.png");
-		controls = new Image("res/controls.png");
-		controlsTitle = new Image("res/controls_title.png");
-		backButton = new Image("res/back_button.png");
+		controlsScreen = new Image("res/controls_screen2.png");
 		
 	}
 	
@@ -37,17 +29,16 @@ public class ControlsScreen extends BasicGameState {
 				g.drawImage(grassGround, (k*100), i);
 			}
 		}
-		g.drawImage(controls, controlsX, controlsY);
-		g.drawImage(controlsTitle, titleX, titleY);
-		g.drawImage(backButton, backX, backY);
+		g.drawImage(controlsScreen, controlsX, controlsY);
 		
 	}
 	
 	public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
+		
 		int mouseX = Mouse.getX();
 		int mouseY = Mouse.getY();
 		
-		if((mouseX > 5 && mouseX < 221) && (mouseY > 346 && mouseY < 400) && MouseAction.isButtonDown(0)) {
+		if((mouseX > 5 && mouseX < 221) && (mouseY > 346 && mouseY < 400) && Mouse.isButtonDown(0)) {
 			if(Mouse.isButtonDown(0)) {
 				sbg.enterState(0);
 			}

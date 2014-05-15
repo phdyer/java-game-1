@@ -12,6 +12,7 @@ public class StartMenu extends BasicGameState {
 	public Image quitButton;
 	public Image menuChest;
 	public Image grassGround;
+	public MenuOptions menu;
 	float titleX = 15;
 	float titleY = 10;
 	float startX = 242;
@@ -46,7 +47,7 @@ public class StartMenu extends BasicGameState {
 		
 		g.drawImage(title, titleX, titleY);
 		g.drawString("Created by: Presley Dyer", 480, 465);
-		g.drawString("             Version 1.0", 480, 480); //update version with releases
+		g.drawString("             Version 1.5", 480, 480);
 		g.drawImage(startButton, startX, startY);
 		g.drawImage(optionsButton, optX, optY);
 		g.drawImage(quitButton, quitX, quitY);
@@ -54,25 +55,14 @@ public class StartMenu extends BasicGameState {
 		
 	}
 	
-	public boolean isMouseClicked() {
-		
-	    if(Mouse.isButtonDown(0)) {
-	    	return true;
-	    }
-	    return false;
-	    
-	}
-	
 	public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
 		
-		MouseAction.update();
-		//System.out.println(MouseAction.isButtonDown(0));
 		Input input = gc.getInput();
 		int mouseX = Mouse.getX();
 		int mouseY = Mouse.getY();
 		
 		//click start button
-		if((mouseX > 242 && mouseX < 458) && (mouseY > 343 && mouseY < 396) && MouseAction.isButtonDown(0)) {
+		if((mouseX > 242 && mouseX < 458) && (mouseY > 343 && mouseY < 396) && Mouse.isButtonDown(0)) {
 				sbg.enterState(4);
 			
 		}
@@ -89,22 +79,6 @@ public class StartMenu extends BasicGameState {
 			}
 		}
 		
-		/* movement for player
-		Input input = gc.getInput();
-		if(input.isKeyDown(Input.KEY_W)) {
-			startY -= .5;
-		}
-		if(input.isKeyDown(Input.KEY_S)) {
-			startY += .5;
-		}
-		if(input.isKeyDown(Input.KEY_A)) {
-			startX -= .5;
-		}
-		if(input.isKeyDown(Input.KEY_D)) {
-			startX += .5;
-		}
-		*/
-		
 	}
 	
 	public int getID() {
@@ -113,12 +87,4 @@ public class StartMenu extends BasicGameState {
 		
 	}
 	
-	public int clicked() {
-		while(Mouse.next()) {
-		    if(Mouse.getEventButton() == 0 && Mouse.getEventButtonState()) {
-		        return 1;
-		    }
-		}
-		return 0;
-	}
 }

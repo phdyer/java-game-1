@@ -23,6 +23,7 @@ public class Player {
 	
 	
 	public Player() throws SlickException {
+		
 		Image[] walkingDown = { new Image("res/player_front.png"), new Image("res/player_front.png") };
 		Image[] walkingUp = { new Image("res/player_back.png"), new Image("res/player_back.png") };
 		Image[] walkingLeft = { new Image("res/player_left.png"), new Image("res/player_left.png") };
@@ -37,28 +38,36 @@ public class Player {
 		jewelSpeech = new Image("res/first_jewel_speech.png");
 		finalJewelSpeech = new Image("res/all_jewel_speech.png");
 		
-		
 		movingUp = new Animation(walkingUp, duration, false);
 		movingDown = new Animation(walkingDown, duration, false);
 		movingLeft = new Animation(walkingLeft, duration, false);
 		movingRight = new Animation(walkingRight, duration, false);
 		player = movingDown;
+		
 	}
 	
 	public void walkingUp() {
+		
 		player = movingUp;
+		
 	}
 	
 	public void walkingDown() {
+		
 		player = movingDown;
+		
 	}
 	
 	public void walkingLeft() {
+		
 		player = movingLeft;
+		
 	}
 	
 	public void walkingRight() {
+		
 		player = movingRight;
+		
 	}
 	
 	public int numberOfKeys() {
